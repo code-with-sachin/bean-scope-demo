@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 //@Scope("singleton")
 //@Scope("prototype")
 @Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
+
 public class Employee {
     public Employee() {
         System.out.println("Employee.java -> Employee bean is created");
