@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 //@Scope("singleton")
 //@Scope("prototype")
 //@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
+@Scope("session")
 public class EmployeeController {
 
     @Autowired
