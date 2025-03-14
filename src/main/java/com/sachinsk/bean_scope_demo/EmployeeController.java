@@ -3,10 +3,13 @@ package com.sachinsk.bean_scope_demo;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+//@Scope("singleton")
+@Scope("prototype")
 public class EmployeeController {
 
     @Autowired
