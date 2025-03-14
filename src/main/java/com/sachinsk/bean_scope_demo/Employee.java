@@ -2,11 +2,13 @@ package com.sachinsk.bean_scope_demo;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
 @Component
 //@Scope("singleton")
-@Scope("prototype")
+//@Scope("prototype")
+@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class Employee {
     public Employee() {
         System.out.println("Employee.java -> Employee bean is created");

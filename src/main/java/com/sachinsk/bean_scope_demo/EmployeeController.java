@@ -4,12 +4,14 @@ import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 //@Scope("singleton")
-@Scope("prototype")
+//@Scope("prototype")
+//@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class EmployeeController {
 
     @Autowired
